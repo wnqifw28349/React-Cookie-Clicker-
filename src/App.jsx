@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import MakeCookie from "./components/MakeCookie.jsx";
 import Cps from "./components/Cps.jsx";
 import RenderUpgrades from "./components/Upgrades/RenderUpgrades.jsx";
+import "./styles/App.css";
 
 export default function App() {
   const [cookies, setCookies] = useState(0);
@@ -27,6 +28,7 @@ export default function App() {
           cps={cps}
           setCps={setCps}
         />
+        <footer>Made with ReactJS</footer>
       </div>
     </>
   );

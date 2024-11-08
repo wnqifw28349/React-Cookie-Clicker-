@@ -23,11 +23,11 @@ export default function RenderUpgrades({
   return (
     <div>
       <h2>Upgrades</h2>
-      <ol>
+      <div>
         {upgrades.map((upgrade) => (
-          <li key={upgrade.id}>
+          <p key={upgrade.id}>
             {upgrade.name} - Cost: {upgrade.cost} Cookies - CPS Increase:{" "}
-            {upgrade.increase}
+            {upgrade.increase}{" "}
             <UpgradeButton
               cookies={cookies}
               setCookies={setCookies}
@@ -35,9 +35,9 @@ export default function RenderUpgrades({
               setCps={setCps}
               upgrade={upgrade}
             />
-          </li>
+          </p>
         ))}
-      </ol>
+      </div>
     </div>
   );
 }

@@ -1,0 +1,10 @@
+.cookie {
+  margin: 0px;
+  font-size: 60px;
+  width: fit-content;
+  user-select: none;
+}
+
+:hover .cookie {
+  cursor: pointer;
+}

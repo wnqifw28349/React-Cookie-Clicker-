@@ -1,3 +1,4 @@
+import "../styles/MakeCookie.css";
 export default function MakeCookie({ cookies, setCookies }) {
   function addCookie() {
     setCookies(cookies + 100);
@@ -5,7 +6,9 @@ export default function MakeCookie({ cookies, setCookies }) {
   return (
     <div>
       <p>Cookies: {cookies}</p>
-      <button onClick={addCookie}>Make a cookie</button>
+      <p className="cookie" onClick={addCookie}>
+        🍪
+      </p>
     </div>
   );
 }
