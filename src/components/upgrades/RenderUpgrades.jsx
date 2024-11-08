@@ -18,7 +18,7 @@ export default function RenderUpgrades({
       setUpgrades(data);
     }
     fetchUpgrades();
-  }, [setUpgrades]);
+  }, []);
 
   return (
     <div>
