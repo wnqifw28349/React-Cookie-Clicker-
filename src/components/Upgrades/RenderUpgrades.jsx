@@ -1,4 +1,4 @@
-import { UpgradeItem } from "./UpgradeItem";
+import { UpgradeButton } from "./UpgradeButton.jsx";
 
 export default function RenderUpgrades({
   useEffect,
@@ -25,14 +25,17 @@ export default function RenderUpgrades({
       <h2>Upgrades</h2>
       <ol>
         {upgrades.map((upgrade) => (
-          <UpgradeItem
-            key={upgrade.id}
-            cookies={cookies}
-            setCookies={setCookies}
-            cps={cps}
-            setCps={setCps}
-            upgrade={upgrade}
-          />
+          <li key={upgrade.id}>
+            {upgrade.name} - Cost: {upgrade.cost} Cookies - CPS Increase:{" "}
+            {upgrade.increase}
+            <UpgradeButton
+              cookies={cookies}
+              setCookies={setCookies}
+              cps={cps}
+              setCps={setCps}
+              upgrade={upgrade}
+            />
+          </li>
         ))}
       </ol>
     </div>
